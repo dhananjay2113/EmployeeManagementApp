@@ -9,12 +9,6 @@ class Employee
     public string Name;
     public string Department;
 
-    //public Employee(int id, string name, string department)
-    //{
-    //    ID = id;
-    //    Name = name;
-    //    Department = department;
-    //}
 }
 class EmployeeManagement
 {
@@ -87,7 +81,7 @@ class EmployeeManagement
         List<string> lines = new List<string>();
         foreach (Employee emp in employees)
         {
-            string line = $"{emp.ID},{emp.Name},{emp.Department}";
+            string line = $"{emp.ID},{emp.Name},{emp.Department}";    //string interpolation
             lines.Add(line);
         }
         File.WriteAllLines(filePath, lines);
@@ -116,10 +110,7 @@ class EmployeeManagement
                     
                     Console.WriteLine("Employee data found");
                 }
-                else
-                {
-                    Console.WriteLine("Not able to get Employee data");
-                }
+                
             }
         }
     }
@@ -151,8 +142,11 @@ class EmployeeManagement
         Employee empDelete = null;
         foreach (Employee emp in employees)
         {
-            if (emp.ID == id) ;
-            empDelete = emp;
+            if (emp.ID == id)
+            {
+                empDelete = emp;
+            }
+            
 
         }
         if (empDelete != null)
