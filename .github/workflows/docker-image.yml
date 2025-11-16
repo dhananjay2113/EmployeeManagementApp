@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: .NET
 
 on:
    workflow_run:
