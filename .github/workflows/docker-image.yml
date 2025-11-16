@@ -1,8 +1,8 @@
-name: .NET
+name: docker deploy
 
 on:
    workflow_run:
-    workflows: ["dotnet.yml"]
+    workflows: [".NET"]
     types:
       - completed
 
