@@ -190,20 +190,5 @@ class EmployeeManagement
         }
     }
 
-    private void DisplayDateInDifferentCultures()
-    {
-        DateTime currentDate = DateTime.Now;
-        CultureInfo[] cultures = new CultureInfo[]
-        {
-            new CultureInfo("en-US"), // United States
-            new CultureInfo("fr-FR"), // France
-            new CultureInfo("ja-JP"), // Japan
-            new CultureInfo("ar-SA")  // Saudi Arabia
-        };
-        foreach (var culture in cultures)
-        {
-            string formattedDate = currentDate.ToString(culture);
-            Console.WriteLine($"Date in {culture.Name}: {formattedDate}");
-        }
-    }
+    
 }
